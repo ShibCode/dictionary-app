@@ -1,0 +1,29 @@
+.input {
+  --padding: 1.25rem;
+
+  background-color: var(--input-color);
+  display: flex;
+  width: 95%;
+  border-radius: 16px;
+}
+
+.input__field {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  padding: var(--padding) 0 var(--padding) var(--padding);
+  font-family: var(--variable-font);
+  color: var(--primary-text);
+}
+
+.input__search {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-purple);
+  cursor: pointer;
+  font-size: 20px;
+  padding: var(--padding);
+}

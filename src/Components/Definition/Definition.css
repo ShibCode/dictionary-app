@@ -1,0 +1,201 @@
+.definitions {
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.definitions__wordHeading {
+  color: var(--primary-text);
+  font-size: 56px;
+  font-family: var(--variable-font);
+  line-break: anywhere;
+  line-height: 64px;
+}
+
+.definitions__subHeading {
+  color: var(--light-gray);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--variable-font);
+}
+
+.definitions__definition {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.definitions__definition > li {
+  font-size: 20px;
+  color: var(--primary-text);
+  list-style: none;
+}
+
+.definitions__definition > li::before {
+  content: "\2022";
+  color: var(--dark-purple);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.definitions__pronunciation {
+  color: var(--light-purple);
+  font-size: 26px;
+  font-weight: 500;
+  line-break: anywhere;
+}
+
+.definitions__otherWords {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.definitions__otherWord {
+  color: var(--light-purple);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transform: 0.2s ease;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+  font-family: var(--variable-font);
+}
+
+.definitions__otherWord:hover {
+  opacity: 0.9;
+}
+
+.definitions__partOfSpeech {
+  font-size: 24px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: Lobster;
+  color: var(--primary-text);
+}
+
+.definitions__line {
+  background-color: var(--light-gray);
+  opacity: 0.4;
+  height: 1px;
+  flex: 1;
+  border-radius: 2px;
+}
+
+.definitions__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.definitions__meaning {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.definitions__dictionary {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.definitions__word {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.definitions__wordLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.definitions__noWord {
+  font-size: 42px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--variable-font);
+  color: var(--primary-text);
+}
+
+.definitions__pronounce {
+  width: 75px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: hsla(274, 64%, 55%, 0.3);
+  border: none;
+  position: relative;
+}
+
+.triangle {
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--dark-purple);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 2.5px), -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .definitions__wordHeading {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .definitions__word {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .definitions__pronounce {
+    width: 50px;
+  }
+
+  .triangle {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .definitions__word {
+    gap: 1rem;
+  }
+
+  .definitions__wordHeading {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .definitions__pronunciation {
+    font-size: 22px;
+  }
+
+  .definitions__definition {
+    padding: 0 0 0 2rem;
+  }
+
+  .definitions__otherWord {
+    font-size: 18px;
+  }
+}
